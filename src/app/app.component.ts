@@ -12,11 +12,15 @@ export class AppComponent {
   liczbaZgadywana = 0;
   
   zgadnij(){
-    if(this.liczbaZgadywana===this.liczbaWylosowana){
+    if (this.liczbaZgadywana===this.liczbaWylosowana) {
       alert("Super zgadłeś");
-    
-    
-    }else{alert("Nie zgadłeś");}
+    } else if (this.liczbaZgadywana > this.liczbaWylosowana) {
+      alert("Nie zgadles. Liczba jest mniejsza.")
+    } else if (this.liczbaZgadywana < this.liczbaWylosowana) {
+      alert("Nie zgadles. Liczba jest wieksza.")
+    } else {
+      alert("Nie zgadłeś");
+    }
   }
 }
 
