@@ -23,9 +23,18 @@ export class SomeComponent {
   };
 
   dodajZadanie() {
+    if(this.newTask.name===''){return}
     this.tasks.push(this.newTask);
+    
     this.clear();
   }
+
+  wszystkieWykonane() {
+    const isDone = (currentValue:any) => currentValue.done;
+    return this.tasks.every(isDone);
+
+  }
+
 
   clear() {
     this.newTask = {
