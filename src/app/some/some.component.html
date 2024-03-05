@@ -1,0 +1,5 @@
+<p *ngFor="let task of tasks" [ngClass]="{ 'cross': task.done }">{{ task.name }} 
+    <input type="checkbox" [(ngModel)]="task.done">
+</p>
+<input type="text" [(ngModel)]="newTask.name">
+<button (click)="dodajZadanie()">Dodaj zadanie</button>
